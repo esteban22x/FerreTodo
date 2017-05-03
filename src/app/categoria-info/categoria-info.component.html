@@ -1,0 +1,19 @@
+<div *ngIf="categoria">
+  <md-card style="width: 30%">
+    <md-card-header>
+      <md-card-title>Categoría Individual</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      
+      <div>
+        <md-input-container>
+          <input mdInput [(ngModel)]="categoria.nombre" placeholder="nombre" />
+        </md-input-container>
+      </div>
+    </md-card-content>
+    <md-card-actions>
+      <button md-button (click)="devolver()"> Atrás </button>
+      <button md-button (click)="actualizar()"> Actualizar </button>
+    </md-card-actions>
+  </md-card>
+  <div>

@@ -1,0 +1,38 @@
+
+<div *ngIf="producto">
+  <md-card style="width: 30%">
+    <md-card-header>
+      <md-card-title>Producto Individual</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <div>
+        
+        <md-input-container>
+          <input mdInput [(ngModel)]="producto.nombre" placeholder="nombre" />
+        </md-input-container>
+        
+      </div>
+      <div>
+        
+        <md-input-container>
+          <input mdInput [(ngModel)]="producto.existencia" placeholder="existencia" />
+        </md-input-container>
+      </div>
+      <div>
+        
+        <md-input-container>
+          <input mdInput [(ngModel)]="producto.precio" placeholder="precio" />
+        </md-input-container>
+      </div>
+      <div>
+        <md-select placeholder="Categoria" [(ngModel)]="producto.id_categoria" style="width:50%"> 
+          <md-option *ngFor="let categoria of categorias" [value]="categoria.Id">{{ categoria.nombre }}</md-option>
+        </md-select>
+      </div>
+    </md-card-content>
+    <md-card-actions>
+      <button md-button (click)="devolver()"> Atrás </button>
+      <button md-button (click)="actualizar()"> Actualizar </button>
+    </md-card-actions>
+  </md-card>
+  <div>

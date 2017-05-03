@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  <span>Ferreteria Bob El Constructor</span>
+</md-toolbar>
+<nav md-tab-nav-bar>
+  <a md-tab-link
+     routerLink="/categoria"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    Categoria
+  </a>
+  <a md-tab-link
+     routerLink="/producto"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    Productos
+  </a>
+</nav>
+<router-outlet></router-outlet>

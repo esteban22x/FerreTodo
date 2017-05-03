@@ -1,0 +1,12 @@
+<h2>Iniciar Sesión</h2>
+
+	
+<form>
+  <md-input-container style="width:30%">
+    <input mdInput [(ngModel)]="credencial.username" name="username" placeholder="Nombre de Usuario">
+  </md-input-container>
+
+  <md-input-container style="width:30%">
+    <input type="password" mdInput [(ngModel)]="credencial.password" name="password" placeholder="Contraseña">
+  </md-input-container>
+  <button md-raised-button (click)="login(credencial)">Iniciar Sesión</button>
